@@ -49,11 +49,11 @@ int *filterEvenNumbers(int arr[], int size, int *newSize) {
       }
     }
 
-  int *arr_pares = (int *)malloc(contador_pares * sizeof(int)); //Crea nuevo arreglo
+  int *arr_pares = (int *)malloc(contador_pares * sizeof(int));
 
   if (arr_pares == NULL) {
     *newSize = 0;
-    return NULL; // Manejo de error: no se pudo asignar memoria
+    return NULL; 
   }
 
   int j = 0;
