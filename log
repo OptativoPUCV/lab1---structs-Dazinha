@@ -1,1 +1,11 @@
 
+Tue 15 Aug 2023 02:49:26 AM UTC: 
+ exercises.c | 107 ++++++++++++++++++++++++++++++++++++++++++++++++++++++------
+ 1 file changed, 97 insertions(+), 10 deletions(-)
+In file included from test.c:1:
+exercises.c: In function ‘inicializarLibro’:
+exercises.c:146:8: error: ‘Libro’ has no member named ‘anio’
+  146 |   libro-> anio.Publicacion = anioPublicacion;
+      |        ^~
+Compilation failed
+96c9012
