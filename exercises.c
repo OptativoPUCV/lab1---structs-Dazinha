@@ -100,7 +100,7 @@ y luego devuelva 1 si el arreglo está ordenado en orden ascendente,
   0 si no está ordenado, y -1 si está ordenado en orden descendente.
 */
 int checkSorted(int arr[], int size) {
-  for(int i = 0 ; i < size ; i++)
+  for(int i = 0 ; i < size - 1 ; i++)
     {
       if (arr[i] < arr[i+1])
       {
