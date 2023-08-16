@@ -160,3 +160,14 @@ Wed 16 Aug 2023 12:06:37 AM UTC:
  tests:  0|4
 total_score: 30/70
 c19b4fa
+Wed 16 Aug 2023 12:10:52 AM UTC: 
+ exercises.c | 15 +++++++++++++--
+ 1 file changed, 13 insertions(+), 2 deletions(-)
+In file included from test.c:1:
+exercises.c: In function ‘checkSorted’:
+exercises.c:103:3: error: unknown type name ‘itn’; did you mean ‘int’?
+  103 |   itn ascendente = 0;
+      |   ^~~
+      |   int
+Compilation failed
+21ec9e5
