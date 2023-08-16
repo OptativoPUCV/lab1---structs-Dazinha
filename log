@@ -306,3 +306,18 @@ Wed 16 Aug 2023 04:13:26 AM UTC:
  tests:  0|1
 total_score: 60/70
 f02f78c
+Wed 16 Aug 2023 04:28:17 AM UTC: 
+ exercises.c | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+In file included from test.c:1:
+exercises.c: In function ‘inicializarLibro’:
+exercises.c:156:18: error: ‘Libro’ has no member named ‘Autor’; did you mean ‘autor’?
+  156 |   strcpy(libro-> Autor.nombre, nombreAutor);
+      |                  ^~~~~
+      |                  autor
+exercises.c:158:11: error: ‘Libro’ has no member named ‘Autor’; did you mean ‘autor’?
+  158 |   libro-> Autor.anioNacimiento = anioNacimiento;
+      |           ^~~~~
+      |           autor
+Compilation failed
+a74bd8b
