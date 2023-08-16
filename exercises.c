@@ -124,7 +124,8 @@ int checkSorted(int arr[], int size) {
   {
     return -1;
   }
-  else{
+  else
+  {
     return 0;
   }
 }
