@@ -120,14 +120,14 @@ int checkSorted(int arr[], int size) {
   {
     return 1;
   }
-  else if (descendente == size - 1)
+  
+  if (descendente == size - 1)
   {
     return -1;
   }
-  else
-  {
-    return 0;
-  }
+  
+  return 0;
+  
 }
 
 /*
