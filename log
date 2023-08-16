@@ -225,3 +225,28 @@ Wed 16 Aug 2023 12:31:09 AM UTC:
  tests:  0|3
 total_score: 40/70
 26ce923
+Wed 16 Aug 2023 02:42:18 AM UTC: 
+ exercises.c | 17 ++++++-----------
+ 1 file changed, 6 insertions(+), 11 deletions(-)
+In file included from test.c:1:
+exercises.c: In function ‘mergeSortedArrays’:
+exercises.c:79:19: error: expected identifier or ‘(’ before ‘int’
+   79 |   for (int i = 0, int j = 0, int k = 0 ; i < size1 && j < size2, k++)
+      |                   ^~~
+exercises.c:79:55: error: ‘j’ undeclared (first use in this function)
+   79 |   for (int i = 0, int j = 0, int k = 0 ; i < size1 && j < size2, k++)
+      |                                                       ^
+exercises.c:79:55: note: each undeclared identifier is reported only once for each function it appears in
+exercises.c:79:66: error: ‘k’ undeclared (first use in this function)
+   79 |   for (int i = 0, int j = 0, int k = 0 ; i < size1 && j < size2, k++)
+      |                                                                  ^
+exercises.c:79:64: error: left-hand operand of comma expression has no effect [-Werror=unused-value]
+   79 |   for (int i = 0, int j = 0, int k = 0 ; i < size1 && j < size2, k++)
+      |                                                                ^
+exercises.c:79:69: error: expected ‘;’ before ‘)’ token
+   79 |   for (int i = 0, int j = 0, int k = 0 ; i < size1 && j < size2, k++)
+      |                                                                     ^
+      |                                                                     ;
+cc1: all warnings being treated as errors
+Compilation failed
+5125788
