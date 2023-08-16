@@ -250,3 +250,18 @@ exercises.c:79:69: error: expected ‘;’ before ‘)’ token
 cc1: all warnings being treated as errors
 Compilation failed
 5125788
+Wed 16 Aug 2023 02:42:54 AM UTC: 
+ exercises.c | 3 ++-
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+In file included from test.c:1:
+exercises.c: In function ‘mergeSortedArrays’:
+exercises.c:80:52: error: left-hand operand of comma expression has no effect [-Werror=unused-value]
+   80 |   for (i = 0, j = 0, k = 0 ; i < size1 && j < size2, k++)
+      |                                                    ^
+exercises.c:80:57: error: expected ‘;’ before ‘)’ token
+   80 |   for (i = 0, j = 0, k = 0 ; i < size1 && j < size2, k++)
+      |                                                         ^
+      |                                                         ;
+cc1: all warnings being treated as errors
+Compilation failed
+1c0fce5
