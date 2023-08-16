@@ -109,7 +109,7 @@ int checkSorted(int arr[], int size) {
         ascendente++;
       }
 
-      else if (arr[i] >= arr[i+1])
+      if (arr[i] >= arr[i+1])
       {
         descendente++;
       }
