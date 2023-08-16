@@ -146,7 +146,7 @@ typedef struct {
 
 typedef struct {
   char titulo[100];
-  Autor autor;
+  Autor autor;  //asociado al struct anterior
   int anioPublicacion;
 } Libro;
 
@@ -155,8 +155,9 @@ void inicializarLibro(Libro *libro, const char *titulo, const char *nombreAutor,
   strcpy(libro-> titulo, titulo);
   strcpy(libro-> autor.nombre, nombreAutor);
 
-  libro-> autor.anioNacimiento = anioNacimiento;
   libro-> anioPublicacion = anioPublicacion;
+  libro-> autor.anioNacimiento = anioNacimiento;
+  
   
 }
 
