@@ -84,6 +84,7 @@ void mergeSortedArrays(int arr1[], int size1, int arr2[], int size2, int result[
       result[k] = arr1[i];
       i++;
     }
+      
     else
     {
       result[k] = arr2[j];
@@ -133,10 +134,9 @@ int checkSorted(int arr[], int size) {
 
 /*
 Ejercicio 6: Información de una Biblioteca
-Descripción: Vamos a representar la información de una biblioteca. En la
-biblioteca, hay libros, y cada libro tiene un autor. Queremos organizar esta
-información utilizando estructuras anidadas en C. Escribe la función para
-inicializar la información de un libro.
+Descripción: Vamos a representar la información de una biblioteca. 
+En la biblioteca, hay libros, y cada libro tiene un autor. 
+Queremos organizar esta información utilizando estructuras anidadas en C. Escribe la función para inicializar la información de un libro.
 */
 
 typedef struct {
@@ -151,10 +151,14 @@ typedef struct {
 } Libro;
 
 void inicializarLibro(Libro *libro, const char *titulo, const char *nombreAutor, int anioNacimiento, int anioPublicacion) {
-  
+
+  strcpy(libro-> titulo, titulo);
+  strcpy(libro-> autor.anioNacimiento, nombreAutor);
+
+  libro-> autor.anioNacimiento = anioNacimiento;
+  libro-> anioPublicacion = anioPublicacion;
   
 }
-
 
 /*
 Ejercicio 7: Lista enlazada de números
