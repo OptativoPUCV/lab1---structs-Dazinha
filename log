@@ -265,3 +265,12 @@ exercises.c:80:57: error: expected ‘;’ before ‘)’ token
 cc1: all warnings being treated as errors
 Compilation failed
 1c0fce5
+Wed 16 Aug 2023 02:43:03 AM UTC: 
+ exercises.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+Wed 16 Aug 2023 02:45:11 AM UTC: 
+ exercises.c | 7 ++++++-
+ 1 file changed, 6 insertions(+), 1 deletion(-)
+ tests:  0|3
+total_score: 40/70
+7cf390d
