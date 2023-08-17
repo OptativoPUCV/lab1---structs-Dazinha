@@ -69,6 +69,10 @@ int *filterEvenNumbers(int arr[], int size, int *newSize) {
   return arr_pares;
 }
 
+//malloc -> se conoce el size, copia los elementos tal cual
+//realloc -> aumenta o disminuye el size
+//calloc -> inicializa todos los elementos en 0
+
 /*
 Ejercicio 4: Fusión de dos Arreglos Ordenados
 Descripción: Escribe una función que tome dos arreglos
@@ -99,7 +103,7 @@ void mergeSortedArrays(int arr1[], int size1, int arr2[], int size2, int result[
 Ejercicio 5: Comprobación de Ordenación
 Descripción: Escribe una función que tome un arreglo y su tamaño,
 y luego devuelva 1 si el arreglo está ordenado en orden ascendente,
-  0 si no está ordenado, y -1 si está ordenado en orden descendente.
+0 si no está ordenado, y -1 si está ordenado en orden descendente.
 */
 int checkSorted(int arr[], int size) {
   int ascendente = 0;
@@ -163,14 +167,9 @@ void inicializarLibro(Libro *libro, const char *titulo, const char *nombreAutor,
 
 /*
 Ejercicio 7: Lista enlazada de números
-Descripción: Escribe una función que tome un arreglo de enteros y su tamaño, y
-luego cree una lista enlazada usando la estructura Nodo. Cada nodo de la lista
-debe contener un número del arreglo, y los nodos deben estar enlazados en el
-mismo orden que los números aparecen en el arreglo. El último nodo de la lista
-debe apuntar a NULL. La función debe devolver un puntero al primer nodo de la
-lista enlazada.
+Descripción: Escribe una función que tome un arreglo de enteros y su tamaño, y luego cree una lista enlazada usando la estructura Nodo. Cada nodo de la lista debe contener un número del arreglo, y los nodos deben estar enlazados en el mismo orden que los números aparecen en el arreglo. El último nodo de la lista debe apuntar a NULL. La función debe devolver un puntero al primer nodo de la lista enlazada.
 Recuerda reservar memoria dinámica para cada nodo usando malloc.
-  */
+*/
 
 typedef struct nodo {
   int numero;
@@ -178,7 +177,32 @@ typedef struct nodo {
 } Nodo;
 
 Nodo *crearListaEnlazada(int arr[], int size) {
+  //CASO CORTE
+  if (size == 0)
+  {
+    return NULL;
+  }
+
+  Nodo *primero = NULL;
+  Nodo **punteroActual = &primero;
   
+  for (int i = 0 ; i < size ; i++)
+  {
+    *punteroActual = (Nodo *) malloc(sizeof(Nodo));
+
+    if (*punteroActual == NULL)
+    {
+      return NULL;
+    }
+
   
-  return NULL;
+    (*punteroActual)->numero = arr[i];
+    (*punteroActual)->siguiente = NULL;
+    
+    punteroActual = &((*punteroActual)->siguiente);
+    
+    
+  }
+  
+  return primero;
 }
