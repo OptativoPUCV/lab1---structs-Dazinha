@@ -11,10 +11,15 @@ y su tamaño, y devuelva el valor más grande del arreglo.
 */
 int findMax(int arr[], int size) {
   int mayor = arr[0];
-  for (int i = 1; i < size; i++) {
-    if (arr[i] > mayor) {
+  
+  for (int i = 1; i < size; i++)
+  {
+    
+    if (arr[i] > mayor)
+    {
       mayor = arr[i];
     }
+    
   }
   return mayor;
 }
@@ -25,11 +30,13 @@ Descripción: Escribe una función que tome un arreglo y su tamaño, y luego
 invierta el orden de sus elementos.
 */
 void reverseArray(int arr[], int size) {
-  for (int i = 0 ; i < size / 2; i++){
+  for (int i = 0 ; i < size / 2; i++)
+  {
       int aux = arr[i];
       arr[i] = arr[size - i - 1];
       arr[size - i - 1] = aux;
   }
+  
 }
 
 /*
@@ -49,7 +56,7 @@ int *filterEvenNumbers(int arr[], int size, int *newSize) {
     }
 
   int *arr_pares = (int *)malloc(contador_pares * sizeof(int));
-
+  
   if (arr_pares == NULL) {
     *newSize = 0;
     return NULL; 
@@ -177,7 +184,7 @@ typedef struct nodo {
 } Nodo;
 
 Nodo *crearListaEnlazada(int arr[], int size) {
-  //CASO CORTE
+  //CASO CORTE: lista vacía
   if (size == 0)
   {
     return NULL;
@@ -190,17 +197,18 @@ Nodo *crearListaEnlazada(int arr[], int size) {
   {
     *punteroActual = (Nodo *) malloc(sizeof(Nodo));
 
+    //verificar que se asigne memoria correctamente
     if (*punteroActual == NULL)
     {
       return NULL;
     }
 
-  
+    
     (*punteroActual)->numero = arr[i];
     (*punteroActual)->siguiente = NULL;
-    
+
+    //actualizar punteroActual
     punteroActual = &((*punteroActual)->siguiente);
-    
     
   }
   
